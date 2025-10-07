@@ -74,7 +74,7 @@ endfunction
 function! neomake#makers#ft#go#golangci_lint() abort
     return {
         \ 'exe': 'golangci-lint',
-        \ 'args': ['run', '--out-format=line-number', '--print-issued-lines=false'],
+        \ 'args': ['run', '--output.text.path=stdout'],
         \ 'output_stream': 'stdout',
         \ 'append_file': 0,
         \ 'cwd': '%:h',
